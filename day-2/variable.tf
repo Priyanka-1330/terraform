@@ -1,27 +1,23 @@
 variable "ami" {
-    default = "ami-0b1ed96948adabcd9"
-}
-variable "instance_type" {
-    default = "t3.micrp"
+  default = "ami-0b1ed96948adabcd9"
 }
 
 variable "key_name" {
-    default = "AWS-New-key"
-}
-
-variable "sg_id" {
-    default = "sg-0d3029db57768f59f"
+  default = "AWS-New-key"
 }
 
 variable "volume_size" {
-    default = 8
+  default = 8
 }
+
 variable "volume_type" {
-    default = "gp3"
+  default = "gp3"
 }
+
 variable "tags" {
-    type = map(string)
-    default = {
-        Name ="webserver"
-    }
+  type = map(string)
+
+  default = {
+    Name = "webserver"
+  }
 }
