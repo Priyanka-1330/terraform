@@ -60,7 +60,7 @@ resource "aws_route_table_association" "public_rt_assoc" {
 }
 
 resource "aws_route_table" "private_rt" {
-    vpc_id = aws_vpc.my_vpc.id
+    vpc_id = aws_vpc.my-vpc.id
     route = {
         cidr_block ="0.0.0.0/0"
         nat_gateway_id = aws_nat_gateway.nat_gateway.id
@@ -76,7 +76,7 @@ resource "aws_route_table_association" "private_rt_assoc" {
 resource "aws_security_group" "my-vpc-sg-tf" {
     name = "my-security-group-"
     description = "my-security-group-"
-    vpc_id =  aws_vpc.my_vpc.id 
+    vpc_id =  aws_vpc.my-vpc.id 
 
     ingress {
         from_port = var.ssh_port
