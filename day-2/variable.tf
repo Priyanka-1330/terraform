@@ -6,6 +6,11 @@ variable "key_name" {
   default = "AWS-New-key"
 }
 
+variable "instance_type" {
+    default = "t3.micro"
+  
+}
+
 variable "volume_size" {
   default = 8
 }
