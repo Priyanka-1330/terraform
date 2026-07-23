@@ -1,4 +1,4 @@
-varialble "vpc_cidr" {
+variable "vpc_cidr" {
     default = "10.0.0.0/16"
 }
 
@@ -14,7 +14,7 @@ variable "private_subnet_cidr" {
     default = "10.0.1.0/24"
 }
 
-varialble "ami" {
+variable "ami" {
     default = "ami-0b1ed96948adabcd9"
 }
 
