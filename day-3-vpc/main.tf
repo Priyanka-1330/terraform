@@ -6,7 +6,7 @@ resource "aws_vpc" "my-vpc" {
 }
 
 resource "aws_subnet" "public_subnet" {
-    vpc_id = aws_vpc.my-vpc
+    vpc_id = aws_vpc.my-vpc.id
     cidr_block = var.cidr_subnet_pub
     availability_zone = var.az_pub
     tags = {
@@ -16,7 +16,7 @@ resource "aws_subnet" "public_subnet" {
 }
 
 resource "aws_subnet" "private_subnet" {
-    vpc_id = aws_vpc.my-vpc
+    vpc_id = aws_vpc.my-vpc.id
     cidr_block = var.cidr_subnet_pvt
     availability_zone = var.az_pvt
     tags = {
