@@ -25,3 +25,7 @@ variable "instance_type" {
 variable "key_name" {
     default = "AWS-New-key"
 }
+
+variable "private_az" {
+    default = "ap-south-1b"
+}
