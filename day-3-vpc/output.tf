@@ -3,7 +3,7 @@ output "public_ip" {
 }
 
 output "sg_id" {
-    value = aws_security_group.my_sg.id 
+    value = aws_security_group.my-security-group-vpc-tf.id 
 }
 
 output "instance_id" {
