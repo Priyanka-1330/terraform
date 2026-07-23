@@ -5,8 +5,7 @@ data "aws_vpc" "existing_vpc" {
 resource "aws_security_group" "sg" {
     name = "my_security_group"
     description = "my_security_group"
-    vpc_id = data.aws_vpc.default.id
-
+    vpc_id = data.aws_vpc.default.id 
     ingress {
         from_port = 22
         to_port = 22
