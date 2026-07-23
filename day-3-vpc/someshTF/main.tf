@@ -104,7 +104,7 @@ resource "aws_instance" "public_instance" {
     ami = var.ami
     instance_type = var.instance_type
     key_name = var.key_name
-    vpc_security_group_ids = [aws_security_group.my-vpc-sg-tf.id]
+    vpc_security_group_ids = [aws_security_group.my_sg.id]
     subnet_id = aws_subnet.public_subnet.id
     associate_public_ip_address = true
     user_data = file("/root/terraform/day-3-vpc/someshTF/user-data.sh")
@@ -117,7 +117,7 @@ resource "aws_instance" "private_instance" {
     ami = var.ami
     instance_type = var.instance_type
     key_name = var.key_name
-    vpc_security_group_ids = [aws_security_group.my-vpc-sg-tf.id]
+    vpc_security_group_ids = [aws_security_group.my_sg.id]
     subnet_id = aws_subnet.private_subnet.id
     user_data = file("/root/terraform/day-3-vpc/someshTF/user-data.sh")
     tags = {
